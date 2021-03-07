@@ -1,0 +1,433 @@
+
+/* barra de navegación */
+body {
+    margin: 0px;
+    font-family: 'segoe ui';
+  }
+  .img {
+      width: 60px;
+      height: 60px;
+  }
+  
+  .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+    width: 100%;
+    background-color: #30006F;
+    position: relative;
+  }
+  
+  .nav > .nav-header {
+    display: inline;
+  }
+  
+  .nav > .nav-header > .nav-title {
+    display: inline-block;
+    font-size: 22px;
+    color: #fff;
+  }
+
+  .nav > .nav-header > .nav-title > a  .nav-img {
+    width: 100px;
+    height: 100px;
+    padding: 0px 0px 0px 0px;
+}
+  
+  .nav > .nav-btn {
+    display: none;
+  }
+  
+  .nav > .nav-links {
+    display: inline;
+    float: right;
+    font-size: 25px;
+  }
+  
+  .nav > .nav-links > a {
+    display: inline-block;
+    padding: 13px 10px 13px 10px;
+    text-decoration: none;
+    color:#6f02fd;
+  }
+  
+  .nav > .nav-links > a:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  
+  .nav > #nav-check {
+    display: none;
+  }
+  
+  @media (max-width:600px) {
+    .nav > .nav-btn {
+      display: inline-block;
+      position: absolute;
+      right: 0px;
+      top: 0px;
+    }
+    .nav > .nav-btn > label {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      padding: 13px;
+    }
+    .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+    .nav > .nav-btn > label > span {
+      display: block;
+      width: 25px;
+      height: 10px;
+      border-top: 2px solid #eee;
+    }
+    .nav > .nav-links {
+      position: absolute;
+      display: block;
+      width: 100%;
+      background-color: #30006F;
+      height: 0px;
+      transition: all 0.3s ease-in;
+      overflow-y: hidden;
+      top: 50px;
+      left: 0px;
+    }
+    .nav > .nav-links > a {
+      display: block;
+      width: 100%;
+    }
+    .nav > #nav-check:not(:checked) ~ .nav-links {
+      height: 0px;
+    }
+    .nav > #nav-check:checked ~ .nav-links {
+      height: calc(100vh - 50px);
+      overflow-y: auto;
+    }
+  }
+
+/* Barra de búsqueda */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+body{
+  background:  #30006F;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.search {
+  width: 100%;
+  position: relative;
+  display: flex;
+}
+
+.searchTerm {
+  width: 100%;
+  border: 3px solid  #6f02fd;
+  border-right: none;
+  padding: 5px;
+  height: 20px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #9DBFAF;
+}
+
+.searchTerm:focus{
+  color:  #6f02fd;
+}
+
+.searchButton {
+  width: 40px;
+  height: 36px;
+  border: 1px solid #6f02fd;
+  background:#30006F;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+  background-image: url(./Img/lupa22.png);
+}
+
+.searchButton:hover {
+  background-color: rgba(0, 0, 0, 0.603);
+}
+/*Resize the wrap to see the search bar change!*/
+.wrap{
+  width: 30%;
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* div sugerencias */
+#suggestions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: baseline;
+    margin: 5%;
+  }
+ #suggestions img {
+    width: 350px;
+    height: 200px;
+}
+
+#suggestions  img:hover {
+  transform: scale(1.05);
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+  transition: 00.3s;
+}
+
+#suggestions  p {
+  color: #6f02fd;
+  text-align: center;
+  width: 95%;
+}
+
+#suggestions button {
+  width: 50%;
+  background-color: transparent;
+  color: #6f02fd;
+  border: solid 2px #6f02fd;
+  align-items: baseline;
+}
+
+.button  {
+  display: flex;
+  align-items: center;
+  align-items: baseline;
+  justify-content: center;
+  padding: 3%;
+}
+
+#suggestions button:hover {
+  background-color: rgba(0, 0, 0, 0.603);
+}
+
+.container {
+  align-items: baseline;
+}
+
+/* div juegos */
+.game{
+    border-radius: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: stretch;
+}
+.listSearch{
+    width: 33.333%;
+    height: auto;
+}
+
+#infoJuego {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: justify;
+  color: white;
+  width: 80%;
+  margin: auto auto 20px auto;
+  border: solid 2px;
+  border-color: #6f02fd;
+  border-bottom: none;
+  border-top: none;
+}
+
+#infoJuego p a{
+  text-decoration: none;
+  color: #6f02fd;
+  font-size: 30px;
+}
+
+#infoJuego p a:hover{
+  background-color: rgba(0, 0, 0, 0.603);
+}
+
+#infoJuego h1 {
+  text-align: center;
+  color:#30006F;
+  font-size: 40px;
+  letter-spacing: 0;
+  text-shadow: -1px -1px 1px rgb(255, 255, 255), 1px -1px 1px rgb(255, 255, 255), -1px 1px 1px rgb(255, 254, 254)
+}
+
+#infoJuego img {
+  width: 500px;
+  height: 300px;
+}
+
+#botonJuego {
+  border: solid 2px;
+  border-color: #6f02fd;
+}
+
+#infoJuego button {
+  font-family: 'segoe ui';
+  justify-content: space-around;
+  background-color: transparent;
+  text-align: center;
+  color:#6f02fd;
+  font-size: 40px;
+  font-weight: 100;
+  border: none;
+  padding: 10px;
+  transition-duration: 0.4s;
+}
+
+#infoJuego button:hover {
+  background-color: rgba(0, 0, 0, 0.603);
+}
+
+#infoJuego p {
+  padding: 0 3% 0 3%;
+}
+
+#infoLista {
+  font-family: 'segoe ui';
+  justify-content: space-around;
+  background-color: transparent;
+  text-align: center;
+  color:white;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 100;
+  border: solid 2px;
+  border-color:  #6f02fd;
+  padding: 10px;
+  transition-duration: 0.4s;
+  margin: auto;
+  height: auto;  
+  align-items: stretch;
+}
+
+#infoLista:hover {
+  background-color: rgba(0, 0, 0, 0.603);
+}
+
+#info {
+  font-family: 'segoe ui';
+  justify-content: space-around;
+  background-color: transparent;
+  text-align: center;
+  color:white;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 100;
+  border: solid 2px;
+  border-color:  #6f02fd;
+  padding: 10px;
+  transition-duration: 0.4s;
+  margin: auto;
+  width: 30%;
+}
+
+#info:hover {
+  background-color: rgba(0, 0, 0, 0.603);
+}
+
+.infoLista {
+  font-family: 'segoe ui';
+  text-decoration: none;
+  justify-content: space-between;
+  background-color: transparent;
+  text-align: center;
+  color:white;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 100;
+  border: solid 2px;
+  border-color:  #6f02fd;
+  padding: 10px;
+  transition-duration: 0.4s;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.infoLista a:hover {
+  background-color: rgba(0, 0, 0, 0.603);
+}
+
+.email {
+  text-decoration: none;
+  color: white;
+}
+
+.selects {
+  color:#6f02fd;
+  font-size: 100%;
+  display: flex;
+  justify-content: space-around;
+  background-color: transparent;
+  align-items: center;
+  padding: 10px;
+  width: 80%;
+  margin: auto;
+  border: solid 2px;
+  border-color: #6f02fd;
+  width:50%;
+  height: 50px;
+}
+
+.selects select{
+	appearance: none;
+	-webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.selects select:hover {
+  background-color:  rgba(0, 0, 0, 0.603);
+}
+
+#siFavorito {
+  font-family: 'segoe ui';
+  justify-content: space-around;
+  background-color: transparent;
+  text-align: center;
+  color:red;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 100;
+  border: solid 2px;
+  border-color:  #6f02fd;
+  padding: 10px;
+  transition-duration: 0.4s;
+  margin: auto;
+  height: auto;  
+  align-items: stretch;
+}
+
+#infoBoton {
+  font-family: 'segoe ui';
+  justify-content: space-around;
+  background-color: transparent;
+  text-align: center;
+  color: #6f02fd;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 100;
+  border: solid 2px;
+  border-color:  #6f02fd;
+  padding: 10px;
+  transition-duration: 0.4s;
+  margin: auto;
+  height: auto;  
+  align-items: stretch;
+}
+
+#siFavorito:hover {
+  background-color: rgba(255, 255, 255, 0.603);
+}
+
+.pie {
+  position:fixed;
+  bottom:0px;
+  height: 10px;
+  width:100%;
+  background-color: grey;
+  border: solid 2px #30006F;
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game About Us</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./Img/logo.jpg" type="image/jpg" />
+</head>
+
+<body>
+    <header>
+        <div class="nav">
+            <input type="checkbox" id="nav-check">
+            <div class="nav-header">
+                <div class="nav-title">
+                    <a href="./index.html"><img class="nav-img" src="./Img/logo.jpg" alt="" /></a>
+
+                </div>
+            </div>
+            <div class="nav-btn">
+                <label for="nav-check">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+            </div>
+
+            <div class="nav-links">
+                <a id="main" href="./index.html">Main</a>
+                <a id="favourite" href="./favourite.html">Favorite</a>
+                <a id="aboutus" href="./aboutus.html">About Us</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="infoLista">
+            <button id="infoLista" onclick="ocultarMostrarAbout(1)">Languages Used</button>
+            <button id="infoLista" onclick="ocultarMostrarAbout(2)">Creator</button>
+            <button id="infoLista" onclick="ocultarMostrarAbout(3)">Point of Interest</button>
+            <div id="languages" class="infoLista">
+                <p>Javascript</p>
+                <p>HTML</p>
+                <p>CSS</p>
+                <p>DOM</p>
+            </div>
+            <div id="creator" class="infoLista">
+                <p>Daniel del Ser Martín</p>
+                <p><a class="email" href="mailto:danieldelsermartin@gmail.com">danieldelsermartin@gmail.com</a></p>
+                <a class="infoLista" href="https://github.com/DanieldelSer" target="_blank">Github</a>
+            </div>
+            <div id="interest" class="infoLista">
+                <a class="infoLista" href="https://api.rawg.io/docs/" target="_blank">API</a>
+            </div>
+        </div>
+    </main>
+    <footer class="pie"></footer>
+    <script src="./aboutus.js"></script>
+</body>
+
+</html>
